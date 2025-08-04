@@ -28,7 +28,7 @@ Zasilanie: Moduł ładowarki 2S z balanserem (IP2326, USB-C).
 
 Monitorowanie baterii: Dzielnik napięcia + ADC.
 
-Akumulatory: 2x Li-ion 18650 (6.0V–8.4V).
+Akumulatory: 2x Li-ion 18650 (6.0V–8.4V). Użyć ze starych glo.
 
 Konwersja napięcia: Step-down 5V + LDO 3.3V.
 
