@@ -84,9 +84,15 @@ Przycisk wielofunkcyjny:
 
 ### 5. Obudowa
 
-- **Projekt:** Solid Edge.
-- **Wykonanie:** Druk 3D, dopasowany do PCB, baterii, czytnika i diod.
-- **Komunikacja:** Wi-Fi do integracji z siecią domową.
+> Projekt obudowy: Stworzony w Solid Edge.
+
+Wykonanie: Prototyp wykonany metodą druku 3D, dopasowany do PCB, baterii, czytnika linii papilarnych oraz diod LED.
+
+Materiał: PLA (lub inny wybrany), uwzględniający przepuszczalność sygnału Wi-Fi.
+
+Elementy konstrukcyjne: Otwory wentylacyjne i miejsca na porty, diody i przycisk.
+
+Mocowanie: Uchwyt na śruby lub zatrzaski, zapewniający stabilność urządzenia.
 
 ---
 
