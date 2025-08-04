@@ -4,11 +4,17 @@
 
 Urządzenie IoT oparte na ESP32 z mikrofonem MEMS, realizujące:
 
-- **Wybudzanie głosem (VAD):** Aktywne nasłuchiwanie i wykrywanie aktywności głosowej.
-- **Autoryzacja biometryczna:** Weryfikacja tożsamości użytkownika za pomocą odcisku palca.
-- **Integracja z Home Assistant:** Przesyłanie poleceń głosowych do sterowania inteligentnym domem.
-- **Energooszczędność:** Optymalizacja pod kątem zasilania bateryjnego.
-- **Zbieranie metryk:** Wysyłanie danych (np. stan baterii, statusy operacji) do analizy.
+### 1. Definicja
+
+Wybudzanie głosem (VAD): Aktywne nasłuchiwanie i wykrywanie aktywności głosowej.
+
+Autoryzacja biometryczna: Weryfikacja tożsamości użytkownika za pomocą odcisku palca.
+
+Integracja z Home Assistant: Przesyłanie poleceń głosowych do sterowania inteligentnym domem.
+
+Energooszczędność: Optymalizacja pod kątem zasilania bateryjnego.
+
+Zbieranie metryk: Wysyłanie danych (np. stan baterii, statusy operacji) do analizy.
 
 ---
 
