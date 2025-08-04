@@ -40,8 +40,8 @@ Czerwona/Zielona: ładowanie, autoryzacja.
 
 Niebieska: nasłuch, oczekiwanie, błąd.
 
-
 Przycisk Tact Switch: Restart, przywracanie firmware.
+
 ---
 
 ### 3. Software
