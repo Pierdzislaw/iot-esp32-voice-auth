@@ -46,20 +46,33 @@ Przycisk Tact Switch: Restart, przywracanie firmware.
 
 ### 3. Software
 
-- **Firmware:** ESPHome (YAML) — szybka integracja z Home Assistant.
-- **Alternatywa:** MicroPython — większa elastyczność, więcej kodu.
-- **Tryb uśpienia:** Deep Sleep + wybudzanie przez VAD.
-- **Logika stanów:** `UŚPIONY`, `CZEKA_NA_ODCISK`, `AUTORYZOWANY_NAGRYWA`, `BŁĄD`.
-- **Komunikacja:** MQTT / HTTP POST do Home Assistant.
-- **Przetwarzanie audio:** Docker z `Whisper`, `Piper`.
-- **Zarządzanie energią:** MOSFET sterowany programowo.
-- **Zarządzanie użytkownikami:** Tryb rejestracji odcisków.
-- **OTA:** Aktualizacje Over-the-Air.
-- **Metryki:** InfluxDB + Grafana (TrueNAS na Proxmox).
-- **Dostęp zdalny:** ZeroTier.
-- **Przycisk wielofunkcyjny:**
-  - 3 sekundy: restart.
-  - 10 sekund: przywrócenie stabilnej wersji.
+> Firmware: ESPHome (YAML) — szybka integracja z Home Assistant jako podstawowa warstwa.
+
+Alternatywa: MicroPython — dla bardziej elastycznych, niestandardowych implementacji.
+
+Tryb uśpienia: Deep Sleep z wybudzaniem na podstawie hardware’owego sygnału z modułu wykrywania aktywności głosowej (VAD realizowany programowo).
+
+Logika stanów: UŚPIONY, CZEKA_NA_ODCISK, AUTORYZOWANY_NAGRYWA, BŁĄD.
+
+Komunikacja: Głównie MQTT do Home Assistant; HTTP POST jako uzupełnienie.
+
+Przetwarzanie audio: Zdalny serwer działający w kontenerze Docker na Proxmox, wykorzystujący Whisper i Piper do rozpoznawania i syntezy mowy.
+
+Zarządzanie energią: Programowo sterowany MOSFET do oszczędzania baterii.
+
+Zarządzanie użytkownikami: Rejestracja i weryfikacja odcisków palca lokalnie na ESP.
+
+OTA: Aktualizacje Over-the-Air dla firmware ESP32.
+
+Metryki: Przesyłanie danych do InfluxDB i wizualizacja w Grafanie (działające na TrueNAS/Proxmox).
+
+Dostęp zdalny: ZeroTier do bezpiecznego dostępu do urządzenia.
+
+Przycisk wielofunkcyjny:
+
+3 s – restart urządzenia.
+
+10 s – przywrócenie stabilnej wersji firmware.
 
 ---
 
