@@ -16,7 +16,7 @@ Urządzenie IoT oparte na ESP32 z mikrofonem MEMS, realizujące:
 
 - **PCB:** Projektowane w KiCad, montaż ręczny.
 - **Mikrofon z VAD:** Knowles SPH0641LU4H (moduł breakout).
-- **Czytnik linii papilarnych:** AS608 lub FPM10A (UART).
+- **Czytnik linii papilarnych:** R307 alternatywa AS608 lub FPM10A (UART).
 - **Zasilanie:** Moduł ładowarki 2S z balanserem (IP2326, USB-C).
 - **Monitorowanie baterii:** Dzielnik napięcia + ADC.
 - **Akumulatory:** 2x Li-ion 18650 (6.0V–8.4V).
