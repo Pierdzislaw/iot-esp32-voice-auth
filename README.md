@@ -1,15 +1,79 @@
-# iot-esp32-voice-auth
+## 📝 Notatki techniczne
 
-Projekt IoT z ESP32 i mikrofonem VAD.  
-Urządzenie obsługuje autoryzację głosową, integrację z Home Assistant i zdalne zarządzanie.
+### 1. Definicja projektu
 
-## Funkcje
-- Wybudzanie głosem
-- Autoryzacja odciskiem palca
-- MQTT, OTA, ZeroTier
+Urządzenie IoT oparte na ESP32 z mikrofonem MEMS, realizujące:
 
-## Hardware
-ESP32, mikrofon MEMS, czytnik AS608, zasilanie Li-ion
+- **Wybudzanie głosem (VAD):** Aktywne nasłuchiwanie i wykrywanie aktywności głosowej.
+- **Autoryzacja biometryczna:** Weryfikacja tożsamości użytkownika za pomocą odcisku palca.
+- **Integracja z Home Assistant:** Przesyłanie poleceń głosowych do sterowania inteligentnym domem.
+- **Energooszczędność:** Optymalizacja pod kątem zasilania bateryjnego.
+- **Zbieranie metryk:** Wysyłanie danych (np. stan baterii, statusy operacji) do analizy.
 
-## Software
-ESPHome, Docker (Whisper + Piper), Home Assistant
+---
+
+### 2. Hardware (ESP32)
+
+- **PCB:** Projektowane w KiCad, montaż ręczny.
+- **Mikrofon z VAD:** Knowles SPH0641LU4H (moduł breakout).
+- **Czytnik linii papilarnych:** AS608 lub FPM10A (UART).
+- **Zasilanie:** Moduł ładowarki 2S z balanserem (IP2326, USB-C).
+- **Monitorowanie baterii:** Dzielnik napięcia + ADC.
+- **Akumulatory:** 2x Li-ion 18650 (6.0V–8.4V).
+- **Konwersja napięcia:** Step-down 5V + LDO 3.3V.
+- **Zarządzanie zasilaniem:** MOSFET (np. 2N7000) do odłączania czytnika.
+- **Diody LED 0805:**
+  - Czerwona/Zielona: ładowanie, autoryzacja.
+  - Niebieska: nasłuch, oczekiwanie, błąd.
+- **Przycisk Tact Switch:** Restart, przywracanie firmware.
+
+---
+
+### 3. Software
+
+- **Firmware:** ESPHome (YAML) — szybka integracja z Home Assistant.
+- **Alternatywa:** MicroPython — większa elastyczność, więcej kodu.
+- **Tryb uśpienia:** Deep Sleep + wybudzanie przez VAD.
+- **Logika stanów:** `UŚPIONY`, `CZEKA_NA_ODCISK`, `AUTORYZOWANY_NAGRYWA`, `BŁĄD`.
+- **Komunikacja:** MQTT / HTTP POST do Home Assistant.
+- **Przetwarzanie audio:** Docker z `Whisper`, `Piper`.
+- **Zarządzanie energią:** MOSFET sterowany programowo.
+- **Zarządzanie użytkownikami:** Tryb rejestracji odcisków.
+- **OTA:** Aktualizacje Over-the-Air.
+- **Metryki:** InfluxDB + Grafana (TrueNAS na Proxmox).
+- **Dostęp zdalny:** ZeroTier.
+- **Przycisk wielofunkcyjny:**
+  - 3 sekundy: restart.
+  - 10 sekund: przywrócenie stabilnej wersji.
+
+---
+
+### 4. Schemat i obliczenia
+
+- Dane techniczne z kart katalogowych: mikrofon, czytnik, ładowarka, MOSFET.
+
+---
+
+### 5. Obudowa
+
+- **Projekt:** Solid Edge.
+- **Wykonanie:** Druk 3D, dopasowany do PCB, baterii, czytnika i diod.
+- **Komunikacja:** Wi-Fi do integracji z siecią domową.
+
+---
+
+### 6. Kosztorys (szacunkowy)
+
+| Komponent                        | Cena (PLN)     |
+|----------------------------------|----------------|
+| Mikrofon Knowles SPH0641LU4H     | 15–50 zł       |
+| Czytnik linii papilarnych AS608  | 20–30 zł       |
+| Moduł ładowania TP4056           | 3–5 zł         |
+| Akumulator Li-ion 18650          | 10–20 zł       |
+| Tranzystor MOSFET (2N7000)       | 1–2 zł         |
+| Diody LED i inne komponenty      | 5–10 zł        |
+| **Suma minimalna**               | **ok. 54 zł**  |
+| **Suma maksymalna**              | **ok. 117 zł** |
+
+---
+
