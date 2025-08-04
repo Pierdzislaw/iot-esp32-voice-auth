@@ -98,17 +98,19 @@ Mocowanie: Uchwyt na śruby lub zatrzaski, zapewniający stabilność urządzeni
 
 ### 6. Kosztorys (szacunkowy)
 
-Komponent	Cena (PLN)
+| Komponent                        | Cena (PLN)    |
+|---------------------------------|---------------|
+| Mikrofon Knowles SPH0641LU4H    | 15–50 zł      |
+| Czytnik linii papilarnych R307  | 15–25 zł      |
+| Moduł ładowania TP4056           | 3–5 zł        |
+| Akumulator Li-ion 18650 (2x)     | 20–40 zł      |
+| Tranzystor MOSFET (2N7000)      | 1–2 zł        |
+| Diody LED i inne komponenty      | 5–10 zł       |
+| ESP32                            | 8–15 zł       |
+| **Suma minimalna**               | **ok. 67 zł** |
+| **Suma maksymalna**              | **ok. 147 zł**|
 
-Mikrofon Knowles SPH0641LU4H	15–50 zł
-Czytnik linii papilarnych R307	15–25 zł
-Moduł ładowania TP4056	3–5 zł
-Akumulator Li-ion 18650 (2x)	20–40 zł
-Tranzystor MOSFET (2N7000)	1–2 zł
-Diody LED i inne komponenty	5–10 zł
-ESP32	8–15 zł
-Suma minimalna	ok. 67 zł
-Suma maksymalna	ok. 147 zł
+*Uwaga:* Koszty nie uwzględniają druku 3D obudowy, kabli oraz narzędzi montażowych. Ceny mogą różnić się w zależności od dostawcy i zakupów hurtowych.
 
 ---
 
