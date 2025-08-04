@@ -20,19 +20,28 @@ Zbieranie metryk: Wysyłanie danych (np. stan baterii, statusy operacji) do anal
 
 ### 2. Hardware (ESP32)
 
-- **PCB:** Projektowane w KiCad, montaż ręczny.
-- **Mikrofon z VAD:** Knowles SPH0641LU4H (moduł breakout).
-- **Czytnik linii papilarnych:** R307 alternatywa AS608 lub FPM10A (UART).
-- **Zasilanie:** Moduł ładowarki 2S z balanserem (IP2326, USB-C).
-- **Monitorowanie baterii:** Dzielnik napięcia + ADC.
-- **Akumulatory:** 2x Li-ion 18650 (6.0V–8.4V).
-- **Konwersja napięcia:** Step-down 5V + LDO 3.3V.
-- **Zarządzanie zasilaniem:** MOSFET (np. 2N7000) do odłączania czytnika.
-- **Diody LED 0805:**
-  - Czerwona/Zielona: ładowanie, autoryzacja.
-  - Niebieska: nasłuch, oczekiwanie, błąd.
-- **Przycisk Tact Switch:** Restart, przywracanie firmware.
+Mikrofon z VAD: Knowles SPH0641LU4H (moduł breakout).
 
+Czytnik linii papilarnych: R307 alternatywa AS608 lub FPM10A (UART).
+
+Zasilanie: Moduł ładowarki 2S z balanserem (IP2326, USB-C).
+
+Monitorowanie baterii: Dzielnik napięcia + ADC.
+
+Akumulatory: 2x Li-ion 18650 (6.0V–8.4V).
+
+Konwersja napięcia: Step-down 5V + LDO 3.3V.
+
+Zarządzanie zasilaniem: MOSFET (np. 2N7000) do odłączania czytnika.
+
+Diody LED 0805:
+
+Czerwona/Zielona: ładowanie, autoryzacja.
+
+Niebieska: nasłuch, oczekiwanie, błąd.
+
+
+Przycisk Tact Switch: Restart, przywracanie firmware.
 ---
 
 ### 3. Software
